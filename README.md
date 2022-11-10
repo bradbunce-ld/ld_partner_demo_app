@@ -34,8 +34,6 @@ Want to use GitHub Pages to publish your own copy of this? You've come to the ri
 
 ### Creating LaunchDarkly flags
 
-The project [**React QR Demo**](https://app.launchdarkly.com/react-qr-demo/) exists on the LD Production account with all the necessary flags. You can add a new environment for yourself.
-
 If you want to create a new project with all the right flags, then you can either use the LaunchDarkly Terraform integration to set all the flags up in one go (see below), or do it manually using the list above.
 
 #### Creating flags with Terraform
