@@ -30,23 +30,6 @@ variable "project_key" {
 provider "launchdarkly" {
   access_token =  var.access_token
 }
-
-resource "launchdarkly_project" "demo_project" {
-  key = var.project_key
-  name = var.project_name
-
-  environments {
-    key = "production"
-    name = "Production"
-    color = "417505"
-  }
-
-  environments {
-    key = "test"
-    name = "Test"
-    color = "F5A623"
-  }
-}
 resource "launchdarkly_feature_flag" "react_background_color" {
   project_key = var.project_key
   key         = "reactBackgroundColor"
@@ -255,9 +238,4 @@ resource "launchdarkly_feature_flag" "show_lion" {
   client_side_availability {
     using_environment_id = true
   }
-}
-
-resource "launchdarkly_feature_flag_environment" "number_env" {
-  flag_id = react_background_color
-  env_key = production
 }
